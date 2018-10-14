@@ -1,0 +1,363 @@
+body {
+    min-width: 1280px;
+    min-height: 830px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#img-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("/static/img/balloons.jpg");
+    background-repeat: no-repeat center;
+    background-size: cover;
+    opacity: 0;
+}
+
+#controller-backdrop {
+    position: absolute;
+    margin-top: 2px;
+    width: 1322px;
+    height: 854px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, .25);
+    border-radius: 1px;
+}
+
+#controller-all-panels-container {
+    position: absolute;
+    margin-top: 11px;
+    width: 1280px;
+    height: 830px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#title-bar {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: calc(100% - 10px);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: "Helvetica";
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgba(48, 48, 48, 1);
+}
+
+#display-panel-container {
+    position: absolute;
+    width: 640px;
+    height: 400px;
+    top: 70px;
+    left: 0;
+}
+
+#control-panel-container {
+    position: absolute;
+    width: 640px;
+    height: 400px;
+    top: 70px;
+    right: 0;
+}
+
+#log-panel-container {
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    bottom: 0;
+    left: 0;
+}
+
+#logs-area {
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 50px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    resize: none;
+    border-radius: 1px;
+    padding-top: 2px;
+    background-color: rgba(250, 250, 250, 1);
+    border: 1px solid rgb(240, 240, 240);
+}
+
+#display-canvas {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 630px;
+    height: 390px;
+    max-width: 630px;
+    max-height: 390px;
+    border-radius: 2px;
+    border: 1px solid rgb(245, 245, 245);
+}
+
+#display-canvas-backdrop {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 630px;
+    height: 390px;
+    max-width: 630px;
+    max-height: 390px;
+    border-radius: 2px;
+    border: 1px solid rgb(245, 245, 245);
+    background-image: url("/static/img/board.png");
+    background-size: cover;
+}
+
+#direction-buttons-label {
+    position: absolute;
+    height: 30px;
+    width: 300px;
+    top: 30px;
+    right: 50px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    font-size: 12px;
+    font-family: "Helvetica";
+    color: rgb(16, 16, 16);
+}
+
+#direction-buttons-container {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 75px;
+    right: 50px;
+}
+
+#game-buttons-label {
+    position: absolute;
+    height: 30px;
+    width: 200px;
+    top: 30px;
+    left: 50px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    font-size: 12px;
+    font-family: "Helvetica";
+    color: rgb(16, 16, 16);
+}
+
+#game-buttons-container {
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    top: 75px;
+    left: 50px;
+}
+
+.direction-button-container {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+}
+
+#forward-button-container {
+    top: 50px;
+    left: 150px;
+}
+
+#left-button-container {
+    top: 150px;
+    left: 50px;
+}
+
+#right-button-container {
+    top: 150px;
+    left: 250px;
+}
+
+#stop-button-container {
+    top: 150px;
+    left: 150px;
+}
+
+#reverse-button-container {
+    top: 250px;
+    left: 150px;
+}
+
+.direction-control-button {
+    position: absolute;
+    margin: 5px;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+    border: 1px solid rgb(230, 230, 230);
+    font-size: 24px;
+    font-family: "Helvetica";
+    color: rgb(16, 16, 16);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.game-control-button {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: "Helvetica";
+    color: rgb(16, 16, 16);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+    user-select: none;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.game-control-button:hover {
+    background-color: rgba(240, 240, 240, .6);
+}
+
+.log-line {
+    width: calc(100% - 28px);
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    line-height: 30px;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 12px;
+    font-family: "Helvetica";
+    color: rgb(16, 16, 16);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 2px;
+}
+
+#shroud {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#setup-menu {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: white;
+    border-radius: 2px;
+}
+
+#announcement {
+    position: absolute;
+    width: 700px;
+    height: 190px;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: white;
+    border-radius: 2px;
+    line-height: 190px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    font-family: "Helvetica";
+    color: rgb(16, 16, 16);
+}
+
+#setup-menu-contents {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    font-family: "Helvetica";
+    font-size: 12px;
+}
+
+#setup-menu-title {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    font-size: 12px;
+}
+
+#setup-menu-submit-button {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    bottom: -55px;
+    left: 50%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    font-family: "Helvetica";
+    color: rgb(16, 16, 16);
+    transform: translate(-50%, -50%);
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 2px;
+}
+
+#setup-menu-submit-button:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+input {
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.car-img {
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    transform: translate(-50%, -50%);
+}
+
+#party-backdrop {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    opacity: 0;
+}

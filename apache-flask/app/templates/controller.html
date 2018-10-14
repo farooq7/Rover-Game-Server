@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/controller.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="party-backdrop">
+        <source src="/static/mp4/party.mp4" type="video/mp4">
+    </video>
+    <div id="img-cover"></div>
+    <div id="controller-backdrop"></div>
+    <div id="controller-all-panels-container">
+        <div id="title-bar">
+            Rover Race Royale
+        </div>
+        <div id="display-panel-container">
+            <div id="display-canvas-backdrop"></div>
+            <div id="display-canvas">
+                <img class="car-img" id="blue-img" src="/static/img/car_blue.png" >
+                <img class="car-img" id="red-img" src="/static/img/car_red.png">
+            </div>
+        </div>
+        <div id="control-panel-container">
+            <div id="game-buttons-label">
+                Game Options
+            </div>
+            <div id="game-buttons-container">
+                <div class="game-control-button" id="start-game-button">Start</div>
+                <div class="game-control-button" id="stop-game-button">Stop</div>
+                <div class="game-control-button" id="setup-game-button">Setup</div>
+                <div class="game-control-button" id="reset-game-button">Reset</div>
+                <div class="game-control-button" id="calibrate-game-button">Calibrate</div>
+            </div>
+            <div id="direction-buttons-label">
+                Direction Controls
+            </div>
+            <div id="direction-buttons-container">
+                <div class="direction-button-container" id="forward-button-container">
+                    <div class="direction-control-button" id="forward-button">⬆</div>
+                </div>
+                <br>
+                <div class="direction-button-container" id="left-button-container">
+                    <div class="direction-control-button" id="left-button">⬅</div>
+                </div>
+                <br>
+                <div class="direction-button-container" id="right-button-container">
+                    <div class="direction-control-button" id="right-button">➡</div>
+                </div>
+                <br>
+                <div class="direction-button-container" id="stop-button-container">
+                    <div class="direction-control-button" id="stop-button">✕</div>
+                </div>
+                <div class="direction-button-container" id="reverse-button-container">
+                    <div class="direction-control-button" id="reverse-button">⬇</div>
+                </div>
+            </div>
+        </div>
+        <div id="log-panel-container">
+            <div id="logs-area"></div>
+        </div>
+    </div>
+    <div id="shroud">
+        <div id="setup-menu">
+            <div id="setup-menu-contents">
+                <p id="setup-menu-title">Setup Menu</p>
+                <div id="setup-menu-form">
+                    Blue rover IP address:
+                    <br>
+                    <input type="text" id="blue-ip-input" value="">
+                    <br>
+                    <br> Red rover IP address:
+                    <br>
+                    <input type="text" id="red-ip-input" value="">
+                    <br>
+                    <br> Which team are you on?
+                    <br>
+                    <input type="radio" name="team-input" value="blue"> Blue
+                    </input>
+                    <br>
+                    <input type="radio" name="team-input" value="red"> Red
+                    </input>
+                    <br>
+                    <input type="radio" name="team-input" value="spectator" checked> Spectator
+                    </input>
+                    <br>
+                    <br>
+                    <div id="setup-menu-submit-button">
+                        Submit
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="announcement">
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/js/controller_shared.js"></script>
+    <script type="text/javascript" src="/static/js/controller_logging.js"></script>
+    <script type="text/javascript" src="/static/js/controller_direction_controls.js"></script>
+    <script type="text/javascript" src="/static/js/controller_game_controls.js"></script>
+    <script type="text/javascript" src="/static/js/controller_display.js"></script>
+    <script type="text/javascript" src="/static/js/controller_notifications.js"></script>
+    <script type="text/javascript" src="/static/js/controller_tokens_check.js"></script>
+    <script type="text/javascript" src="/static/js/controller_party_mode.js"></script>
+</body>
+
+</html>

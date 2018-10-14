@@ -1,0 +1,17 @@
+; name, color, slowdown_left, slowdown_right, duration, x, y, x1, y1, x2, y2, 0, unique, target_limit, description
+Blue 1, blue, 0, 0, 0, 37.5, 12.5, -50, -50, 75, 50, true, 0, Blue gains 1 point!
+Blue 2, blue, 0, 0, 0, 162.5, 37.5, 125, -50, 250, 62, true, 0, Blue gains 1 point!
+Blue 3, blue, 0, 0, 0, 62.5, 87.5, 25, 50, 100, 125, true, 0, Blue gains 1 point!
+Blue 4, blue, 0, 0, 0, 137.5, 87.5, 100, 62, 175, 125, true, 0, Blue gains 1 point!
+Blue 5, blue, 0, 0, 0, 112.5, 167.5, 50, 125, 150, 250, true, 0, Blue gains 1 point!
+Red 1, red, 0, 0, 0, 87.5, 37.5, 25, -50, 150, 75, true, 0, Red gains 1 point!
+Red 2, red, 0, 0, 0, 62.5, 112.5, 25, 75, 75, 137, true, 0, Red gains 1 point!
+Red 3, red, 0, 0, 0, 137.5, 112.5, 100, 75, 175, 150, true, 0, Red gains 1 point!
+Red 4, red, 0, 0, 0, 37.5, 162.5, -50, 137, 75, 250, true, 0, Red gains 1 point!
+Red 5, red, 0, 0, 0, 162.5, 187.5, 125, 150, 250, 250, true, 0, Red gains 1 point!
+Green 1, green, 100, 100, 45, 12.5, 87.5, -50, -50, 60, 150, true, 0, Speed has been locked to max for 30 seconds.
+Green 2, green, 100, 100, 45, 187.5, 112.5, 125, 50, 250, 175, true, 0, Speed has been locked to max for 30 seconds.
+Yellow 1, yellow, -1, 1, 10, 187.5, 12.5, 100, -50, 250, 100, true, 0, Motor directions have been switched for 15 seconds!
+Yellow 2, yellow, -1, 1, 10, 12.5, 187.5, -50, 100, 100, 250, true, 0, Motor directions have been switched for 15 seconds!
+Blue Wall, black, .1, .1, 10, 0, 0, 0, 0, 200, 200, false, 192.168.0.4, Speed has been reduced by 50% for 15 seconds.
+Red Wall, black, .1, .1, 10, 0, 0, 0, 0, 200, 200, false, 192.168.0.3, Speed has been reduced by 50% for 15 seconds.

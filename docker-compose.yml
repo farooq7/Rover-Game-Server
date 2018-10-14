@@ -1,0 +1,17 @@
+version: '2'
+services:
+  apache-flask:
+    build: ./apache-flask
+    ports:
+      - "2000:80"
+    restart: always
+    volumes:
+      - ./apache-flask/app/:/var/www/apache-flask/app/
+      - ./apache-flask/config/:/var/www/apache-flask/config/
+    #entrypoint: /usr/bin/env python -u run.py config/flask.cfg
+
+  db:
+    build: ./db
+    ports:
+      - '27017:27017'
+    restart: always
